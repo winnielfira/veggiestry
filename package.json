@@ -1,0 +1,122 @@
+{
+  "name": "veggiestry",
+  "version": "1.0.0",
+  "description": "E-commerce website untuk sayuran segar dan organik - Platform jual beli sayuran online dengan fitur lengkap",
+  "main": "index.php",
+  "scripts": {
+    "setup": "node scripts/setup_database.js",
+    "setup:admin": "mysql -u root -p < scripts/create_admin_user.sql",
+    "setup:images": "mysql -u root -p < scripts/create_placeholder_images.sql && php scripts/generate_placeholder_images.php",
+    "dev": "php -S localhost:8000 -t .",
+    "dev:watch": "npm-watch",
+    "build": "npm run clean && npm run minify-css && npm run minify-js && npm run optimize-images",
+    "build:prod": "npm run build && npm run test",
+    "clean": "rm -rf dist/ && mkdir -p dist/css dist/js",
+    "minify-css": "cleancss -o dist/css/style.min.css assets/css/style.css assets/css/home.css assets/css/products.css assets/css/cart.css assets/css/checkout.css assets/css/auth.css",
+    "minify-css:admin": "cleancss -o dist/css/admin.min.css assets/css/admin-dashboard.css assets/css/account.css",
+    "minify-js": "uglifyjs assets/js/main.js assets/js/home.js assets/js/cart.js assets/js/checkout.js assets/js/auth.js -c -m -o dist/js/main.min.js",
+    "minify-js:admin": "uglifyjs assets/js/admin-dashboard.js assets/js/account.js -c -m -o dist/js/admin.min.js",
+    "optimize-images": "imagemin assets/images/* --out-dir=dist/images",
+    "lint:php": "php -l **/*.php",
+    "lint:js": "eslint assets/js/**/*.js",
+    "lint:css": "stylelint assets/css/**/*.css",
+    "lint": "npm run lint:php && npm run lint:js && npm run lint:css",
+    "test": "npm run lint",
+    "validate": "php scripts/quick_fix_blog.php",
+    "backup:db": "mysqldump -u root -p veggiestry_db > backups/db_$(date +%Y%m%d_%H%M%S).sql",
+    "start": "npm run dev",
+    "postinstall": "echo 'Jangan lupa setup database dengan: npm run setup'"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "assets/css",
+        "assets/js"
+      ],
+      "extensions": "css,js",
+      "ignore": [
+        "node_modules",
+        "dist",
+        "backups"
+      ]
+    }
+  },
+  "keywords": [
+    "ecommerce",
+    "vegetables",
+    "sayuran",
+    "fresh",
+    "segar",
+    "organic",
+    "organik",
+    "php",
+    "mysql",
+    "responsive",
+    "online-shop",
+    "marketplace",
+    "agriculture",
+    "pertanian",
+    "food",
+    "makanan"
+  ],
+  "author": {
+    "name": "Winni Elfira",
+    "email": "winnielfira@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Winni Elfira",
+      "email": "halo@veggiestry.com"
+    }
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "php": ">=7.4.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "npm-watch": "^0.11.0",
+    "eslint": "^8.57.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.5",
+    "dotenv": "^16.4.5"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winnielfira/veggiestry.git"
+  },
+  "homepage": "https://veggiestry.com",
+  "config": {
+    "php_version": "8.0",
+    "mysql_version": "8.0"
+  },
+  "directories": {
+    "lib": "./includes",
+    "doc": "./docs",
+    "test": "./tests"
+  },
+  "files": [
+    "api/",
+    "assets/",
+    "auth/",
+    "config/",
+    "includes/",
+    "pages/",
+    "scripts/",
+    "admin/",
+    "index.php",
+    "README.md"
+  ]
+}
