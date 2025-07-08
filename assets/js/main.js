@@ -9,7 +9,7 @@ async function updateCartCount() {
   }
 
   try {
-    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+    const basePath = '/';
     const response = await fetch(`${basePath}api/get-cart-count.php`);
     const result = await response.json();
 
@@ -40,7 +40,7 @@ async function updateWishlistCount() {
   console.log("Wishlist count element found:", wishlistCountElement);
 
   try {
-    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+    const basePath = '/';
     const apiUrl = `${basePath}api/wishlist.php?action=getCount`;
     console.log("Fetching from:", apiUrl);
 
@@ -74,7 +74,7 @@ async function addToCart(productId) {
   console.log("Adding product to cart:", productId);
 
   try {
-    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+    const basePath = '/';
     const response = await fetch(`${basePath}api/add-to-cart.php`, {
       method: "POST",
       headers: {
@@ -108,7 +108,7 @@ async function toggleWishlist(productId) {
   console.log("toggleWishlist called for product:", productId);
 
   try {
-    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+    const basePath = '/';
     const apiUrl = `${basePath}api/wishlist.php`;
     console.log("Posting to:", apiUrl);
 
@@ -204,9 +204,7 @@ async function checkWishlistStatus() {
     if (!productId) continue;
 
     try {
-      const basePath = window.location.pathname.includes("/pages/")
-        ? "../"
-        : "";
+      const basePath = '/'; 
       const response = await fetch(
         `${basePath}api/wishlist.php?action=check&product_id=${productId}`
       );
@@ -298,9 +296,7 @@ document.addEventListener("click", (event) => {
 function searchProducts() {
   const searchInput = document.getElementById("searchInput");
   if (searchInput && searchInput.value.trim()) {
-    const basePath = window.location.pathname.includes("/pages/")
-      ? ""
-      : "pages/";
+    const basePath = '/'; 
     window.location.href = `${basePath}products.php?search=${encodeURIComponent(
       searchInput.value
     )}`;

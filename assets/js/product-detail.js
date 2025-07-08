@@ -72,7 +72,7 @@ async function checkRealTimeStock(showNotification = false) {
   isUpdatingStock = true;
 
   try {
-    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+    const basePath = '/';
     const response = await fetch(
       `${basePath}api/get-stock.php?product_id=${currentProductId}`
     );
@@ -319,7 +319,7 @@ async function addToCartDetail(productId) {
   addToCartBtn.classList.add("loading");
 
   try {
-    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+    const basePath = '/'; 
     const response = await fetch(`${basePath}api/add-to-cart.php`, {
       method: "POST",
       headers: {
@@ -411,9 +411,7 @@ function buyNow(productId) {
 
   addToCartDetail(productId).then(() => {
     setTimeout(() => {
-      const basePath = window.location.pathname.includes("/pages/")
-        ? ""
-        : "pages/";
+      const basePath = '/'; 
       window.location.href = `${basePath}checkout.php`;
     }, 1500);
   });
