@@ -1,5 +1,5 @@
 <?php
-$base_url = '/veggiestry';
+$base_url = '';
 
 $current_page = basename($_SERVER['PHP_SELF']);
 $current_dir = basename(dirname($_SERVER['PHP_SELF']));
