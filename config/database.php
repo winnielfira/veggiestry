@@ -11,10 +11,10 @@ define('SITE_URL', 'http://veggiestry.projec2ks2.my.id');
 define('UPLOAD_PATH', 'assets/images/');
 
 // Session Configuration
-ini_set('session.cookie_httponly', 1);
-ini_set('session.use_only_cookies', 1);
-ini_set('session.cookie_secure', 0);  // Set to 1 for HTTPS
-session_start();
+//ini_set('session.cookie_httponly', 1);
+//ini_set('session.use_only_cookies', 1);
+//ini_set('session.cookie_secure', 0);  // Set to 1 for HTTPS
+//session_start();
 
 // Database Connection
 $host = DB_HOST;
