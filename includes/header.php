@@ -2,8 +2,8 @@
     <div class="container">
         <div class="header-content">
             <div class="logo">
-                <a href="/veggiestry/index.php">
-                    <img src="/veggiestry/assets/images/logo.svg" alt="Veggiestry" onerror="this.style.display='none'">
+                <a href="/index.php">
+                    <img src="/assets/images/logo.svg" onerror="this.style.display='none'">
                 </a>
             </div>
 
@@ -20,7 +20,7 @@
 
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <div class="wishlist-icon">
-                        <a href="/veggiestry/pages/wishlist.php">
+                        <a href="/pages/wishlist.php">
                             <i class="fas fa-heart"></i>
                             <span class="wishlist-count" id="wishlistCount">0</span>
                         </a>
@@ -29,7 +29,7 @@
 
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <div class="cart-icon">
-                        <a href="/veggiestry/pages/cart.php">
+                        <a href="/pages/cart.php">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
@@ -45,20 +45,20 @@
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="dropdown-menu" id="profileDropdown">
-                                <a href="/veggiestry/pages/account.php">
+                                <a href="/pages/account.php">
                                     <i class="fas fa-user"></i>
                                     Profil Saya
                                 </a>
-                                <a href="/veggiestry/pages/wishlist.php">
+                                <a href="/pages/wishlist.php">
                                     <i class="fas fa-heart"></i>
                                     Wishlist Saya
                                 </a>
-                                <a href="/veggiestry/pages/account.php#orders">
+                                <a href="/pages/account.php#orders">
                                     <i class="fas fa-shopping-bag"></i>
                                     Pesanan Saya
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a href="/veggiestry/auth/logout.php">
+                                <a href="/auth/logout.php">
                                     <i class="fas fa-sign-out-alt"></i>
                                     Logout
                                 </a>
@@ -66,8 +66,8 @@
                         </div>
                     <?php else: ?>
                         <div class="auth-buttons">
-                            <a href="/veggiestry/auth/login.php" class="btn-login">Login</a>
-                            <a href="/veggiestry/auth/register.php" class="btn-register">Daftar</a>
+                            <a href="/auth/login.php" class="btn-login">Login</a>
+                            <a href="/auth/register.php" class="btn-register">Daftar</a>
                         </div>
                     <?php endif; ?>
                 </div>
