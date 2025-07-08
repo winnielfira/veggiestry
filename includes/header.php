@@ -3,7 +3,7 @@
         <div class="header-content">
             <div class="logo">
                 <a href="index.php">
-                    <img src="assets/images/logo.svg" onerror="this.style.display='none'">
+                    <img src="/assets/images/logo.svg" onerror="this.style.display='none'">
                 </a>
             </div>
 
