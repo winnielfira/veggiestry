@@ -296,7 +296,7 @@ document.addEventListener("click", (event) => {
 function searchProducts() {
   const searchInput = document.getElementById("searchInput");
   if (searchInput && searchInput.value.trim()) {
-    const basePath = '/'; 
+    const basePath = '/pages/'; 
     window.location.href = `${basePath}products.php?search=${encodeURIComponent(
       searchInput.value
     )}`;
