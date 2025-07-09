@@ -143,7 +143,7 @@ $admin_name = $_SESSION['full_name'] ?? $_SESSION['username'] ?? 'Administrator'
                     </button>
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="productSearch" placeholder="Cari produk..." onkeyup="searchProducts()">
+                        <input type="text" id="productSearch" placeholder="Cari produk" onkeyup="searchProducts()">
                     </div>
                 </div>
 
@@ -182,7 +182,7 @@ $admin_name = $_SESSION['full_name'] ?? $_SESSION['username'] ?? 'Administrator'
                     </button>
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="categorySearch" placeholder="Cari kategori..." onkeyup="searchCategories()">
+                        <input type="text" id="categorySearch" placeholder="Cari kategori" onkeyup="searchCategories()">
                     </div>
                 </div>
 
@@ -249,7 +249,7 @@ $admin_name = $_SESSION['full_name'] ?? $_SESSION['username'] ?? 'Administrator'
                     <div class="search-order">
                         <div class="search-box">
                             <i class="fas fa-search"></i>
-                            <input type="text" id="orderIdSearch" placeholder="Masukkan Order ID..." onkeyup="searchOrderById()">
+                            <input type="text" id="orderIdSearch" placeholder="Masukkan Order ID" onkeyup="searchOrderById()">
                         </div>
                     </div>
 
@@ -272,7 +272,7 @@ $admin_name = $_SESSION['full_name'] ?? $_SESSION['username'] ?? 'Administrator'
                 <div class="action-bar">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="customerSearch" placeholder="Cari nama pelanggan..." onkeyup="searchCustomers()">
+                        <input type="text" id="customerSearch" placeholder="Cari pelanggan" onkeyup="searchCustomers()">
                     </div>
                 </div>
 

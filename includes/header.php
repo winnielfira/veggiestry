@@ -9,7 +9,7 @@
 
             <div class="search-container">
                 <div class="search-bar-wrapper">
-                    <input type="text" id="searchInput" placeholder="Cari produk segar..." class="search-input-header">
+                    <input type="text" id="searchInput" placeholder="Cari produk" class="search-input-header">
                     <button onclick="searchProducts()" class="search-btn-header">
                         <i class="fas fa-search"></i>
                     </button>

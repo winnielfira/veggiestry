@@ -56,7 +56,7 @@ if (empty($blog_posts)) {
                 <form method="GET" class="search-form">
                     <input type="hidden" name="category" value="<?= htmlspecialchars($category) ?>">
                     <div class="search-container">
-                        <input type="text" name="search" placeholder="Cari resep atau tips..." value="<?= htmlspecialchars($search) ?>" class="search-input">
+                        <input type="text" name="search" placeholder="Cari artikel resep makanan atau fakta kesehatan" value="<?= htmlspecialchars($search) ?>" class="search-input">
                         <button type="submit" class="search-btn">
                             <i class="fas fa-search"></i>
                         </button>
